@@ -7,6 +7,7 @@
   const description = ref('A good looking hoodie for winter time 😎.')
   const inventory = ref(1);
   const onSale = ref(true);
+  const details = ref(['80% cotton', '10% wool', '10% polyester']);
 </script>
 
 <template>
@@ -21,7 +22,11 @@
       <p v-if="inventory > 10">In stock</p>
       <p v-else-if="inventory <= 10 && inventory > 0">Almost out of stock</p>
       <p v-else ="inventory = 0">Out of stock</p>
+            <ul>
+        <li v-for ="detail in details">{{ detail }}</li>
+      </ul>
       <p v-if="onSale">On Sale!</p>
+
     </div>
   </div>
 </div>
