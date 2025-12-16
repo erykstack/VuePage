@@ -8,6 +8,13 @@
   const inventory = ref(1);
   const onSale = ref(true);
   const details = ref(['80% cotton', '10% wool', '10% polyester']);
+  const variants = ref([
+  {id: 2222, color: 'black'},
+  {id: 3333, color: 'red'}
+  ]);
+  const sizes = ref(['XS', 'S', 'M', 'L', 'XL','Lose some weight to fit in it!']);
+
+
 </script>
 
 <template>
@@ -25,6 +32,10 @@
             <ul>
         <li v-for ="detail in details">{{ detail }}</li>
       </ul>
+      <div v-for = "variant in variants" :key="variant.id">{{ variant.color }}</div>
+      <hl>
+        <li v-for="size in sizes">{{ size }}</li>
+      </hl>
       <p v-if="onSale">On Sale!</p>
 
     </div>
