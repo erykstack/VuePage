@@ -6,12 +6,12 @@
   const product = ref('Hoodie');
   const image = ref(hoodieImage);
   const description = ref('A good looking hoodie for winter time 😎.')
-  const inventory = ref(1);
+  const inventory = ref(20);
   const onSale = ref(true);
   const details = ref(['80% cotton', '10% wool', '10% polyester']);
   const variants = ref([
-  {id: 2222, color: 'black', image: hoodieImage},
-  {id: 3333, color: 'red', image: hoodieImage2}
+  {id: 2222, color: 'rgb(88,88,101)', image: hoodieImage},
+  {id: 3333, color: 'rgb(99,56,60)', image: hoodieImage2}
   ]);
   const sizes = ref(['XS', 'S', 'M', 'L', 'XL','Lose some weight to fit in it!']);
 
@@ -32,7 +32,7 @@ const updateImage = (variantImage) => image.value = variantImage
 <div class="product-display">
   <div class="product-container">
     <div class="product_image">
-      <img v-bind:src="image">
+      <img :class="{ out_of_stock_img: inventory === 0 }" v-bind:src="image">
     </div>
     <div class="product-info">
       <h1>{{ product }}</h1>
@@ -45,14 +45,18 @@ const updateImage = (variantImage) => image.value = variantImage
      <div v-for="variant in variants" 
           :key="variant.id"
           @mouseover="updateImage(variant.image)"
+          class="color-circle"
+          :style="{backgroundColor: variant.color}"
         >
-      {{ variant.color }}
     </div>
       <hl>
         <li v-for="size in sizes">{{ size }}</li>
       </hl>
       <p v-if="onSale">On Sale!</p>
-      <button class="button" v-on:click="addToCart">Add to Cart</button> <!--instead of v-on:click we can use @click -->
+      <button class="button" v-on:click="addToCart"
+      :class="{ disabledButton : inventory === 0 }"
+      :disabled= "inventory === 0" 
+      >Add to Cart</button> <!--instead of v-on:click we can use @click -->
       <button class="button" @click="removeFromCart">Remove Item</button> <!--instead of v-on:click we can use @click -->
     </div>
   </div>
