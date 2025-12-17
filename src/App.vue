@@ -18,6 +18,10 @@
   const cart = ref(0);
 
 const addToCart = () => cart.value += 1;
+const removeFromCart = () => {
+  if (cart.value >0)
+  cart.value -= 1;
+}
 
 const updateImage = (variantImage) => image.value = variantImage
 </script>
@@ -49,6 +53,7 @@ const updateImage = (variantImage) => image.value = variantImage
       </hl>
       <p v-if="onSale">On Sale!</p>
       <button class="button" v-on:click="addToCart">Add to Cart</button> <!--instead of v-on:click we can use @click -->
+      <button class="button" @click="removeFromCart">Remove Item</button> <!--instead of v-on:click we can use @click -->
     </div>
   </div>
 </div>
