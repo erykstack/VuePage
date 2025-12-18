@@ -12,10 +12,7 @@
         }
 
     })
-
-
-
-
+    const emit = defineEmits(['add-to-cart','remove-cart']); // Emitting event to parent component
 
   const product = ref('Hoodie');
   const brand = ref('Winter Collection');
@@ -26,7 +23,7 @@
   const details = ref(['80% cotton', '10% wool', '10% polyester']);
   const variants = ref([
   {id: 2222, color: 'rgb(88,88,101)', image: hoodieImage, quantity: 69},
-  {id: 3333, color: 'rgb(99,56,60)', image: hoodieImage2, quantity: 0}
+  {id: 3333, color: 'rgb(99,56,60)', image: hoodieImage2, quantity: 2}
   ]);
   const sizes = ref(['XS', 'S', 'M', 'L', 'XL','Lose some weight to fit in it!']);
 
@@ -34,10 +31,12 @@
     return brand.value + ' ' + product.value;
   })
 
-const addToCart = () => cart.value += 1;
-const removeFromCart = () => {
-  if (cart.value >0)
-  cart.value -= 1;
+const addToCart = () => { // Function to emit event to parent component from button click
+    emit('add-to-cart', variants.value[selectedVariant.value].id);
+}
+
+const removeFromCart = () => { // Function to emit event to parent component from button click
+    emit('remove-cart');
 }
 
 const image = computed (() => {
@@ -92,6 +91,14 @@ const updateVariant = (index) => {selectedVariant.value = index}
         >
           Add to cart
         </button>
+
+        <button
+          class="button" 
+          v-on:click="removeFromCart"
+        >
+          Remove item
+        </button>
+
       </div>
     </div>
   </div>
