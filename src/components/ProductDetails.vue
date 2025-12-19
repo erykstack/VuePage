@@ -21,7 +21,7 @@ const updateVariant = (index) => {selectedVariant.value = index}
 
 <template>
         <ul>
-          <li v-for="detail in details">{{ detail }}</li>
+          <li v-for="detail in details">{{ detail }}</li>   <!--Looping through details array passed as prop from parent component -->
         </ul>
 
 
