@@ -39,7 +39,7 @@ const removeFromCart = () => { // Function to emit event to parent component fro
     emit('remove-cart');
 }
 
-const image = computed (() => {
+const image = computed (() => { //change the property of image based on selected variant
   return variants.value[selectedVariant.value].image; 
 })
 

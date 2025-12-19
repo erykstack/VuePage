@@ -2,11 +2,11 @@
 
   import { ref} from 'vue';
   import ProductDisplay from '@/components/ProductDisplay.vue';
-import ProductDetails from './components/ProductDetails.vue';
+  import ProductDetails from './components/ProductDetails.vue';
 
-  const cart = ref([]);
-  const premium = ref(false);
-  const updateCart = (id) => {
+  const cart = ref([]); // Array to hold cart items with ids
+  const premium = ref(false); // Boolean to indicate if user is premium
+  const updateCart = (id) => {  // Function to update cart when event is received from child component
     cart.value.push(id);
   }
 const removeFromCart = () => {
