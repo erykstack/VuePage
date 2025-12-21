@@ -5,7 +5,7 @@
   import hoodieImage from '@/assets/images/Hoodie_1.png'
   import hoodieImage2 from '@/assets/images/Hoodie_2.png'
 
-    const props = defineProps({
+    const props = defineProps({ //calling the definition of props sent to mother 
         details: {
             type: Array,
             required: true
