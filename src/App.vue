@@ -9,7 +9,7 @@
   const updateCart = (id) => {  // Function to update cart when event is received from child component
     cart.value.push(id);
   }
-const removeFromCart = () => {
+const removeFromCart = () => { // function to remove items from Cart
   if (cart.value.length >0)
   cart.value.pop();
 }
