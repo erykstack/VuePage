@@ -5,7 +5,7 @@
   import hoodieImage2 from '@/assets/images/Hoodie_2.png'
     import ProductDetails from './ProductDetails.vue';
 
-    const props = defineProps({
+    const props = defineProps({ //function for checking the premium membership 
         premium: {
             type: Boolean,
             required: true
