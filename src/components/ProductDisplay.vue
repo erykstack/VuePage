@@ -4,6 +4,8 @@
   import hoodieImage from '@/assets/images/Hoodie_1.png'
   import hoodieImage2 from '@/assets/images/Hoodie_2.png'
     import ProductDetails from './ProductDetails.vue';
+    import ReviewForm from './ReviewForm.vue';
+    import ReviewList from './ReviewList.vue';
 
     const props = defineProps({
         premium: {
@@ -30,6 +32,13 @@
   const tittle = computed(() => {
     return brand.value + ' ' + product.value;
   })
+
+const reviews = ref([]); // Array to hold reviews submitted from ReviewForm component
+
+const addReview = (review) => {
+  reviews.value.push(review)
+}
+
 
 const addToCart = () => { // Function to emit event to parent component from button click
     emit('add-to-cart', variants.value[selectedVariant.value].id);
@@ -98,9 +107,12 @@ const updateVariant = (index) => {selectedVariant.value = index}
         >
           Remove item
         </button>
-
+    
       </div>
     </div>
+    <ReviewList v-if= "reviews.length > 0" :reviews="reviews"></ReviewList>
+    <ReviewForm @review-submitted="addReview"></ReviewForm>
+        
   </div>
 
 </template>

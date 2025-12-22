@@ -130,7 +130,7 @@ p {
   padding: 3rem;
 }
 
-.review-form {
+.review_form {
   display: flex;
   flex-direction: column;
   width: 425px;
