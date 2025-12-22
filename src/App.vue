@@ -5,7 +5,7 @@
   import ProductDetails from './components/ProductDetails.vue';
 
   const cart = ref([]); // Array to hold cart items with ids
-  const premium = ref(false); // Boolean to indicate if user is premium
+  const premium = ref(true); // Boolean to indicate if user is premium
   const updateCart = (id) => {  // Function to update cart when event is received from child component
     cart.value.push(id);
   }
@@ -21,6 +21,7 @@ const removeFromCart = () => { // function to remove items from Cart
   <div class="nav-bar"></div>
   <div class="cart">Cart({{ cart.length }})</div>
   <ProductDisplay :premium ="premium" @add-to-cart="updateCart" @remove-cart="removeFromCart">  </ProductDisplay>
+  <ProductDetails>  </ProductDetails>
 
 </template>
 
