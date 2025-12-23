@@ -7,7 +7,7 @@
     import ReviewForm from './ReviewForm.vue';
     import ReviewList from './ReviewList.vue';
 
-    const props = defineProps({
+    const props = defineProps({ //function for checking the premium membership 
         premium: {
             type: Boolean,
             required: true
