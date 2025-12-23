@@ -56,7 +56,7 @@ const inStock = computed (() => {
   return variants.value[selectedVariant.value].quantity > 0;
 })
 
-const shipping = computed (() => {
+const shipping = computed (() => {  //using Props for checking the premium user
     if(props.premium){
         return 'Free';
     }
