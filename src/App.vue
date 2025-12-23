@@ -1,8 +1,8 @@
 <script setup>
 
   import { ref} from 'vue';
-  import ProductDisplay from '@/components/ProductDisplay.vue';
-  import ProductDetails from './components/ProductDetails.vue';
+  import ProductDisplay from '@/components/ProductDisplay.vue'; //import of ProductDisplay page from components
+  import ProductDetails from './components/ProductDetails.vue'; //import of ProductDetails page from components
 
   const cart = ref([]); // Array to hold cart items with ids
   const premium = ref(true); // Boolean to indicate if user is premium

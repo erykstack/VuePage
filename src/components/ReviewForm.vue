@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 
 const emit = defineEmits (['review-submitted'])
 
-const review = reactive ({
+const review = reactive ({ //description of review constant that is used for Product Review
     name: '',
     content: '',
     rating: null,
