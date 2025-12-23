@@ -2,10 +2,10 @@
 
   import { ref, computed} from 'vue';
 
-  import hoodieImage from '@/assets/images/Hoodie_1.png'
+  import hoodieImage from '@/assets/images/Hoodie_1.png' //import of images
   import hoodieImage2 from '@/assets/images/Hoodie_2.png'
 
-    const props = defineProps({
+    const props = defineProps({  //definition of composition of Props variable
         details: {
             type: Array,
             required: true
