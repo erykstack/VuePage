@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 
- 
+ // review list container with code for handling the props
 
 defineProps({
     reviews: {
@@ -20,7 +20,7 @@ const recommendText = computed (() => {
 </script>
 
 <template>
-    <div class="review-container">
+    <div class="review-container"> 
         <h3>Reviews:</h3>
         <p></p>
         <ul>

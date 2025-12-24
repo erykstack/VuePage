@@ -7,7 +7,7 @@
     import ReviewForm from './ReviewForm.vue';
     import ReviewList from './ReviewList.vue';
 
-    const props = defineProps({
+    const props = defineProps({ //function for checking the premium membership 
         premium: {
             type: Boolean,
             required: true
@@ -52,7 +52,7 @@ const inStock = computed (() => {
   return variants.value[selectedVariant.value].quantity > 0;
 })
 
-const shipping = computed (() => {
+const shipping = computed (() => {  //using Props for checking the premium user
     if(props.premium){
         return 'Free';
     }
