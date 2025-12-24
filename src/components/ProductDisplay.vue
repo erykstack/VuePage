@@ -35,10 +35,6 @@
 
 const reviews = ref([]); // Array to hold reviews submitted from ReviewForm component
 
-const addReview = (review) => {
-  reviews.value.push(review)
-}
-
 
 const addToCart = () => { // Function to emit event to parent component from button click
     emit('add-to-cart', variants.value[selectedVariant.value].id);
@@ -65,6 +61,9 @@ const shipping = computed (() => {  //using Props for checking the premium user
     }
 
 })
+
+const addReview = (review) => { reviews.value.push(review);}
+
 
 const updateVariant = (index) => {selectedVariant.value = index}
 
@@ -110,9 +109,9 @@ const updateVariant = (index) => {selectedVariant.value = index}
     
       </div>
     </div>
-    <ReviewList v-if= "reviews.length > 0" :reviews="reviews"></ReviewList>
     <ReviewForm @review-submitted="addReview"></ReviewForm>
-        
+    <ReviewList v-if= "reviews.length > 0" :reviews="reviews"></ReviewList>
+      
   </div>
 
 </template>

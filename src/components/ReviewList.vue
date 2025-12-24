@@ -10,6 +10,13 @@ defineProps({
     }
 })
 
+const recommendText = computed (() => {
+    return review.recommend === true 
+    ? 'Would recommend' 
+    : review.recommend === false 
+    ? 'Would not recommend' : '';
+})
+
 </script>
 
 <template>
@@ -21,6 +28,8 @@ defineProps({
                 <span>{{ review.name }} gave this {{ review.rating }} ⭐️</span>
                 <br/>
                 <span>"{{ review.content }}"</span>
+                <br/>
+                <span> {{ recommendText }}</span>
             </li>
         </ul>
     </div>
