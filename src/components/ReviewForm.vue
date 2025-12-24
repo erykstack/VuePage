@@ -7,7 +7,7 @@ const review = reactive ({
     name: '',
     content: '',
     rating: null,
-    recommend: ''
+    recommend: null
 })
 
 const onSubmit = () => {
@@ -30,7 +30,7 @@ emit('review-submitted', productReview)
 review.name = '';
 review.content = '';
 review.rating = null;
-review.recommend = '';
+review.recommend = null;
 }
 </script>
 
@@ -53,8 +53,10 @@ review.recommend = '';
         <br/>
         <label for ="recomend">Would you recommend this item?</label>
         <select id ="recomend" v-model.recommend = "review.recommend">
-            <option>Yes</option>
-            <option>No</option>
+
+            <option disabled :value = "null">Yes</option>
+            <option :value = "true">Yes</option>
+            <option :value = "false">No</option>
 
         </select>
 
