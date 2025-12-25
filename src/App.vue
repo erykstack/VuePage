@@ -21,7 +21,7 @@ const removeFromCart = () => { // function to remove items from Cart
   <div class="nav-bar"></div>
   <div class="cart">Cart({{ cart.length }})</div>
   <ProductDisplay :premium ="premium" @add-to-cart="updateCart" @remove-cart="removeFromCart">  </ProductDisplay>
-  <ProductDetails>  </ProductDetails>
+  <ProductDetails>  </ProductDetails>  <!-- ProductDetails component added to App.vue -->
 
 </template>
 

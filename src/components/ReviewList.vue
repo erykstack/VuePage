@@ -10,7 +10,7 @@ defineProps({
     }
 })
 
-const recommendText = computed (() => {
+const recommendText = computed (() => { // Computed property to return recommendation text based on review data
     return review.recommend === true 
     ? 'Would recommend' 
     : review.recommend === false 
