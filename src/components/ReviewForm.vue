@@ -10,7 +10,7 @@ const review = reactive ({ //description of review constant that is used for Pro
     recommend: null
 })
 
-const onSubmit = () => {
+const onSubmit = () => { // Function to handle the coreect submission of review form
 
     if(review.name === '' || review.content === '' || review.rating === null || review.recommend === null){
         alert('Please fill the form before sumbiting.')

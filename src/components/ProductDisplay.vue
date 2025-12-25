@@ -49,7 +49,7 @@ const image = computed (() => { //change the property of image based on selected
 })
 
 const inStock = computed (() => {
-  return variants.value[selectedVariant.value].quantity > 0;
+  return variants.value[selectedVariant.value].quantity > 0; //checking the stock based on selected variant
 })
 
 const shipping = computed (() => {  //using Props for checking the premium user

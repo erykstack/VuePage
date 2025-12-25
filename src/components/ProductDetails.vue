@@ -15,7 +15,7 @@
 
 
 
-const updateVariant = (index) => {selectedVariant.value = index}
+const updateVariant = (index) => {selectedVariant.value = index} // Function to update the selected variant based on user interaction
 
 </script>
 
