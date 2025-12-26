@@ -35,6 +35,8 @@
 
 const reviews = ref([]); // Array to hold reviews submitted from ReviewForm component
 
+const lastRecommend = ref(null); // Variable to hold the last recommend value
+
 
 const addToCart = () => { // Function to emit event to parent component from button click
     emit('add-to-cart', variants.value[selectedVariant.value].id);
@@ -62,8 +64,10 @@ const shipping = computed (() => {  //using Props for checking the premium user
 
 })
 
-const addReview = (review) => { reviews.value.push(review);}
 
+
+const addReview = (review) => { reviews.value.push(review)
+}
 
 const updateVariant = (index) => {selectedVariant.value = index}
 

@@ -32,6 +32,9 @@ review.content = '';
 review.rating = null;
 review.recommend = null;
 }
+
+console.log('d00pa', review.recommend);
+
 </script>
 
 <template>
@@ -54,7 +57,7 @@ review.recommend = null;
         <label for ="recomend">Would you recommend this item?</label>
         <select id ="recomend" v-model.recommend = "review.recommend">
 
-            <option disabled :value = "null">Yes</option>
+            <option disabled :value = "null">-</option>
             <option :value = "true">Yes</option>
             <option :value = "false">No</option>
 
