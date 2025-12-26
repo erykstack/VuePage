@@ -33,7 +33,6 @@ review.rating = null;
 review.recommend = null;
 }
 
-console.log('d00pa', review.recommend);
 
 </script>
 

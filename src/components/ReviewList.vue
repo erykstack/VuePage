@@ -9,7 +9,6 @@ defineProps({
         required: true
     }
 })
- console.log
 
 </script>
 
