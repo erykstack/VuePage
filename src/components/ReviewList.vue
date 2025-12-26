@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue';
+import {  computed } from 'vue';
 
  // review list container with code for handling the props
 
@@ -9,13 +9,7 @@ defineProps({
         required: true
     }
 })
-
-const recommendText = computed (() => { // Computed property to return recommendation text based on review data
-    return review.recommend === true 
-    ? 'Would recommend' 
-    : review.recommend === false 
-    ? 'Would not recommend' : '';
-})
+ console.log
 
 </script>
 
@@ -29,7 +23,8 @@ const recommendText = computed (() => { // Computed property to return recommend
                 <br/>
                 <span>"{{ review.content }}"</span>
                 <br/>
-                <span> {{ recommendText }}</span>
+                <span>Would you recommend: {{ review.recommend ? 'Yes' : 'No' }}</span>
+                <br/><br/>
             </li>
         </ul>
     </div>
