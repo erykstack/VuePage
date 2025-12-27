@@ -22,6 +22,7 @@ defineProps({
                 <br/>
                 <span>"{{ review.content }}"</span>
                 <br/>
+                <!-- Display recommendation based on boolean value -->
                 <span>Would you recommend: {{ review.recommend ? 'Yes' : 'No' }}</span>
                 <br/><br/>
             </li>

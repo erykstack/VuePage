@@ -55,8 +55,8 @@ review.recommend = null;
         <br/>
         <label for ="recomend">Would you recommend this item?</label>
         <select id ="recomend" v-model.recommend = "review.recommend">
-
-            <option disabled :value = "null">-</option>
+<!-- options for automatic response message-->
+            <option disabled :value = "null">-</option> 
             <option :value = "true">Yes</option>
             <option :value = "false">No</option>
 

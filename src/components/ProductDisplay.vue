@@ -67,7 +67,7 @@ const shipping = computed (() => {  //using Props for checking the premium user
 
 
 const addReview = (review) => { reviews.value.push(review)
-}
+} // Function to add review to reviews array when review-submitted event is emitted from ReviewForm component
 
 const updateVariant = (index) => {selectedVariant.value = index}
 
