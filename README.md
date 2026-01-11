@@ -1,4 +1,14 @@
-# For running this file please dowlnoad the repository. 
+# Check this app here: 
+https://vue-page-etdd.vercel.app/
+
+This is vue based site, you can change the hoodie colour by drag the cursor on the grey or light brown cicrcles, you can add the item to the cart and remove it.
+
+You can leave a review and submit it! 
+
+<img width="1470" height="1155" alt="image" src="https://github.com/user-attachments/assets/10703770-fe58-4a96-b2c0-495b693264ff" />
+
+
+
 
 This template should help get you started developing with Vue 3 in Vite.
 
